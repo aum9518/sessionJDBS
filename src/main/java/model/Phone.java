@@ -1,13 +1,11 @@
-package org.example.model;
+package model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 @ToString
 
 public class Phone {
@@ -15,4 +13,18 @@ public class Phone {
     private String model;
     private String brand;
     private int price;
+    private Long userId;
+
+    public Phone(String model, String brand, int price, Long userId) {
+        this.model = model;
+        this.brand = brand;
+        this.price = price;
+        this.userId = userId;
+    }
+
+    public Phone(String model, String brand, int price) {
+        this.model = model;
+        this.brand = brand;
+        this.price = price;
+    }
 }

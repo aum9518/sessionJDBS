@@ -4,11 +4,11 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class Configuration {
+public class Config {
     private static final String url = "jdbc:postgresql://localhost:5432/for_practice";
     private static final String userName = "postgres";
     private static final String password = "postgres";
-    private static Connection connectionToDataBase(){
+    public static Connection connectionToDataBase(){
         Connection connection = null;
        try {
           connection= DriverManager.getConnection(

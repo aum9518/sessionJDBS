@@ -1,6 +1,6 @@
-package org.example.dao;
+package dao;
 
-import org.example.model.User;
+import model.User;
 
 import java.util.List;
 
@@ -18,5 +18,6 @@ public interface UserDao {
     void dropUserTable();
 
     void deleteById(Long id);
+    List<User>getAllSortedUsers(String ascDesc);
 
 }
